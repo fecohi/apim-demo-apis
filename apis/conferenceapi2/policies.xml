@@ -2,6 +2,12 @@
     <inbound>
         <base />
         <set-backend-service base-url="https://conferenceapi.azurewebsites.net" />
+        <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Token validation failed">
+            <openid-config url="https://login.microsoftonline.com/16b3c013-d300-468d-ac64-7eda0820b6d3/.well-known/openid-configuration" />
+            <audiences>
+                <audience>api://csa-apimdemo-appuri</audience>
+            </audiences>
+        </validate-jwt>
     </inbound>
     <backend>
         <base />
