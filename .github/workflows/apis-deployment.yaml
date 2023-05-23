@@ -11,8 +11,8 @@ on:
   workflow_dispatch:
 
 env:
-  RG: contoso-${{ github.ref_name }}-rg
-  APIM_SERVICE: contoso-${{ github.ref_name }}-apim-123
+  RG: asisa-${{ github.ref_name }}-rg
+  APIM_SERVICE: asisa-${{ github.ref_name }}-apim-0520231007
 
 jobs:
 
